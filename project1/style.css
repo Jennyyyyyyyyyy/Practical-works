@@ -76,10 +76,8 @@ body{
     margin-bottom: 25px;
 }
 
+/* 完整覆蓋 iOS Safari 的點擊/聚焦樣式 */
 .answer-btn {
-  all: unset;
-  display: block;
-  width: 100%;
   background-color: #f8f0e5;
   color: #333;
   border: 2px solid #eadbc8;
@@ -95,7 +93,6 @@ body{
     background-color:#eadbc8;
     border-color: #dac0ae;
 }
-
 
 .answer-btn.correct{
     background-color: #e6fff0;
