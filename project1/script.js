@@ -102,7 +102,7 @@ function showQuestion() {
   answersContainer.innerHTML = "";
 
   currentQuestion.answers.forEach(answer => {
-    const button = document.createElement("div");//
+    const button = document.createElement("button");//
     button.textContent = answer.text;
     button.classList.add("answer-btn");
 
