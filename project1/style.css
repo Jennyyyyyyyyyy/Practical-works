@@ -77,8 +77,6 @@ body{
 }
 
 .answer-btn{
-    -webkit-appearance: none;
-    appearance: none;
     background-color: #f8f0e5;
     color: #333;
     border: 2px solid #eadbc8;
@@ -87,10 +85,22 @@ body{
     cursor: pointer;
     text-align: left;
     transition: all 0.3s ease;
+    -webkit-appearance: none;   /* 移除 iOS 預設樣式 */
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent; /* 防止點擊產生灰色背景 */
 }
 .answer-btn:hover{
     background-color:#eadbc8;
     border-color: #dac0ae;
+}
+
+.answer-btn:focus,
+.answer-btn:active {
+    background-color: #eadbc8; /* 跟 hover 一樣 */
+    border-color: #dac0ae;
+    outline: none;
+    box-shadow: none;
 }
 
 .answer-btn.correct{
