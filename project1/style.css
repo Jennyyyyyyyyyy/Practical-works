@@ -84,23 +84,7 @@ body{
   padding: 1rem;
   cursor: pointer;
   text-align: left;
-  transition: all 0.3s ease;
-  user-select: none;
-
-  /* iOS 防預設 highlight */
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  touch-action: manipulation;
-  -webkit-user-select: none;
-}
-
-/* 👉 移除 iOS 點擊前/中/後 自動背景變灰的問題 */
-.answer-btn:focus,
-.answer-btn:active,
-.answer-btn:focus-visible {
-  background-color: #f8f0e5 !important;
-  outline: none !important;
-  box-shadow: none !important;
+  
 }
 
 .answer-btn:hover{
