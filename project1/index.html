@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問答遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="screen active" id="start-screen">
+            <h1>問答小遊戲~</h1>
+            <p>不用會，只要敢猜～你有幾%是靠直覺活到今天🤪</p>
+            <button id="start-btn">開始問答</button>
+        </div>
+
+        <div class="screen" id="quiz-screen">
+
+            <div class="quiz-header">
+                <h2 id="question-text">問題在這裡</h2>
+                <div class="quiz-info">
+                    <p>
+                        Question <span id="current-question">1</span> of <span id="total-questions">5</span>
+                    </p>
+
+                    <p>
+                        Score: <span id="score">0</span>
+                    </p>
+
+                </div>
+            </div>
+
+            <div id="answers-container" class="answers-container">
+                <!--答案按鈕之後會透過 JavaScript 程式碼插入到這裡。-->
+            </div>
+            
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h1>測驗結果</h1>
+            <div class="result-info">
+                <p>你的分數<span id="final-score">0</span> out of <span id="max-score">5</span></p>
+                <div id="result-message">做得不錯!</div>
+            </div>
+            <button id="restart-btn">重新測驗</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
