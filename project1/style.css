@@ -76,20 +76,25 @@ body{
     margin-bottom: 25px;
 }
 
-.answer-btn{
-    background-color: #f8f0e5;
-    color: #333;
-    border: 2px solid #eadbc8;
-    border-radius: 10px;
-    padding: 1rem;
-    cursor: pointer;
-    text-align: left;
-    transition: all 0.3s ease;
-    -webkit-appearance: none;   /* 移除 iOS 預設樣式 */
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-tap-highlight-color: transparent; /* 防止點擊產生灰色背景 */
+/* 完整覆蓋 iOS Safari 的點擊/聚焦樣式 */
+.answer-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #f8f0e5;
+  color: #333;
+  border: 2px solid #eadbc8;
+  border-radius: 10px;
+  padding: 1rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent; /* <== 抑制點擊時變色 */
+  user-select: none; /* 防止文字被選取時導致變色 */
+  touch-action: manipulation; /* 幫助觸控行為穩定 */
 }
+
 .answer-btn:hover{
     background-color:#eadbc8;
     border-color: #dac0ae;
@@ -97,10 +102,9 @@ body{
 
 .answer-btn:focus,
 .answer-btn:active {
-    background-color: #eadbc8; /* 跟 hover 一樣 */
-    border-color: #dac0ae;
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
+  background-color: #eadbc8; /* 保持 hover 狀態一致 */
 }
 
 .answer-btn.correct{
